@@ -1,0 +1,15 @@
+// TypeScript compiler settings. TypeScript allows comments in this file.
+{
+  "compilerOptions": {
+    // Produce CommonJS modules (require/exports), the format Node and ts-node run directly.
+    "module": "CommonJS",
+    // JavaScript language level of the output; ES2019 runs on every supported Node version.
+    "target": "ES2019",
+    // Turn on all strict type checks, so mistakes are caught before the tests run.
+    "strict": true,
+    // Do not type-check the libraries in node_modules (faster, and their errors are not ours to fix).
+    "skipLibCheck": true
+  },
+  // Files TypeScript checks: all source code and the Playwright config.
+  "include": ["src/**/*.ts", "playwright.config.ts"]
+}

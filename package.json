@@ -1,0 +1,27 @@
+{
+  "name": "census-login-kt",
+  "version": "1.0.0",
+  "description": "BDD with Cucumber + Playwright + TypeScript — 2026 Census Test login (KT build)",
+  "scripts": {
+    "pretest": "node -e \"require('fs').rmSync('reports/allure-results', { recursive: true, force: true })\"",
+    "test": "cucumber-js",
+    "pretest:rerun": "npm run pretest",
+    "test:rerun": "cucumber-js --profile rerun @rerun.txt",
+    "report": "npm run report:allure && npm run report:pdf",
+    "report:allure": "allure generate",
+    "report:pdf": "ts-node src/gov.census.isr.utils/reportPdf.ts",
+    "report:open": "allure open reports/allure-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.10.5",
+    "allure": "^3.22.1",
+    "allure-cucumberjs": "^3.14.0",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "default": {
+    "require": [
+      "src/gov.census.isr.utils/**/*.ts",
+      "src/gov.census.isr.steps/**/*.ts"
+    ],
+    "paths": ["resources/gov.census.isr.feature/**/*.feature"],
+    "requireModule": ["ts-node/register"],
+    "format": [
+      "progress",
+      "html:reports/cucumber-report.html",
+      "json:reports/cucumber-report.json",
+      "junit:reports/cucumber-report.xml",
+      "rerun:@rerun.txt",
+      "allure-cucumberjs/reporter:reports/allure-reporter.log"
+    ],
+    "formatOptions": {
+      "junit": { "suiteName": "Census Login" },
+      "resultsDir": "reports/allure-results"
+    }
+  },
+  "rerun": {
+    "require": [
+      "src/gov.census.isr.utils/**/*.ts",
+      "src/gov.census.isr.steps/**/*.ts"
+    ],
+    "requireModule": ["ts-node/register"],
+    "format": [
+      "progress",
+      "html:reports/cucumber-report.html",
+      "json:reports/cucumber-report.json",
+      "junit:reports/cucumber-report.xml",
+      "rerun:@rerun.txt",
+      "allure-cucumberjs/reporter:reports/allure-reporter.log"
+    ],
+    "formatOptions": {
+      "junit": { "suiteName": "Census Login" },
+      "resultsDir": "reports/allure-results"
+    }
+  }
+}
